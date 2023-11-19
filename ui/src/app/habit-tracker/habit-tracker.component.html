@@ -1,0 +1,18 @@
+<input type="text" placeholder="habit name" #habitName>
+<textarea type="text" placeholder="description" #description></textarea>
+<input type="date" placeholder="start date" #date [value]="getToday()">
+<input type="number" placeholder="goal days" #days>
+
+<button (click)="createHabit(habitName.value)">Create</button>
+
+
+<div class="habitContainer" *ngFor="let habit of habits">
+  <button class="remove-btn" (click)="delete(habit._id)">delete</button>
+  <h2 [title]="'started: ' + habit.startDate.toLocaleString()">{{habit.name}}</h2>
+ <div class="done-today">
+   <input class="note-input" placeholder="Note" #note>
+   <button class="done-today-btn" (click)="doneToday(habit._id, note.value)">Done Today</button>
+ </div>
+  <div>{{habit?.description}}</div>
+  <app-box-table [startDate]="habit.startDate" [numberOfBox]="66"  [habit]="habit"></app-box-table>
+</div>

@@ -1,0 +1,44 @@
+@import "src/shared.scss";
+
+input, textarea {
+  //width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input:focus, textarea:focus {
+  border: 3px solid #555;
+}
+
+.note-input{
+  padding: 5px;
+  margin: 5px;
+}
+
+.done-today-btn{
+background: $primary-dark-blue;
+  color: $primary-grey;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.done-today {
+  padding: 5px;
+}
+
+.habitContainer {
+  background: $primary-grey;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 15px;
+}
+
+.remove-btn {
+  float: right;
+  border-radius: 25px;
+  padding: 5px;
+  background: #706262;
+  color: $primary-grey;
+  cursor: pointer;
+}
